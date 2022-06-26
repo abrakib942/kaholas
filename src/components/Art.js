@@ -33,7 +33,7 @@ const Art = ({ art }) => {
         />
       </p>
 
-      <div className="mt-16 grid lg:grid-cols-2">
+      <div className="mt-16 grid lg:grid-cols-2 gap-8">
         <div className="">
           <p>{details}</p>
 
@@ -116,8 +116,13 @@ const Art = ({ art }) => {
           </div>
         </div>
 
-        <div>
-          <div></div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+          <img className="h-96" src={img1} alt="" />
+
+          <div className="">
+            <img className="w-60" src={img2} alt="" />
+            <img className="w-60 h-44 mt-3" src={img3} alt="" />
+          </div>
         </div>
       </div>
     </div>
