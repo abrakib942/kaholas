@@ -1,5 +1,8 @@
-import { faStar, faStarHalfAlt } from "@fortawesome/free-regular-svg-icons";
-import { faCircleQuestion } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCircleQuestion,
+  faHeart,
+  faShare,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Rating from "react-rating";
 import girl from "../assets/girl.png";
@@ -36,7 +39,7 @@ const Art = ({ art }) => {
 
           <div className="my-5 flex items-center">
             <img className="w-10 " src={girl} alt="" />
-            <p className="font-bold text-purple-700 ml-2">{teacher}</p>
+            <p className="font-bold text-[#503DD4] ml-2">{teacher}</p>
           </div>
           <div className="lg:flex">
             <p>
@@ -81,6 +84,36 @@ const Art = ({ art }) => {
             </small>
           </div>
           <p>Completed by {learners} learners</p>
+
+          <div className="flex items-center mt-8">
+            <div>
+              <button className="bg-[#503DD4] rounded-3xl px-5 py-2 text-white flex">
+                See Class Schedule{" "}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div>
+              <button className="text-[#503DD4]  font-bold ml-6">
+                <FontAwesomeIcon icon={faHeart} /> Save
+              </button>
+              <button className="text-[#503DD4]  font-bold ml-6">
+                <FontAwesomeIcon icon={faShare} /> Share
+              </button>
+            </div>
+          </div>
         </div>
 
         <div>
